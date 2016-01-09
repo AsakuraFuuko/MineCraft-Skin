@@ -81,7 +81,7 @@ class SkinController extends Controller
         $path = str_finish($this->skin_path, '/') . $fileName;
         $content = File::get($file['tmp_name']);
 
-        if (is_image($file['type']) && $file['size'] <= 100 * 1000) {
+        if (is_image($file['type']) && $file['size'] <= 150 * 1000) {
 
             list($img_w, $img_h) = getimagesize($file['tmp_name']);
             if ($img_w > 64 || $img_h > 64) {
