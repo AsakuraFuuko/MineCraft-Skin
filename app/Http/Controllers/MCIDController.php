@@ -54,7 +54,7 @@ class MCIDController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'mcid' => 'required|max:255',
+            'mcid' => 'required|unique|max:255',
         ]);
 
         $request->user()->mcids()->create([
