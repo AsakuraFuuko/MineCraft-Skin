@@ -41,7 +41,7 @@ class SkinController extends Controller
             'Expires' => 'Fri, 01 Jan 1990 00:00:00 GMT'
         );
 
-        $mcid_id = str_replace($mcid_id, '.png', '');
+        $mcid_id = str_replace('.png', '');
         dd($mcid_id);
         $mcid = MCID::where('mcid', $mcid_id)->first();
         if ($mcid != null && !$mcid->genuine) {
