@@ -38,14 +38,18 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('/myid', 'MCIDController');
 
     Route::group(['middleware' => 'auth'], function () {
-        Route::get('/skin/{mcid}/head', 'SkinController@head');
-        Route::get('/skin/{mcid}/preview', 'SkinController@preview');
-        Route::post('/skin/{mcid}', 'SkinController@update');
+        Route::get('/skins/{mcid}/head', 'SkinController@head');
+        Route::get('/skins/{mcid}/preview', 'SkinController@preview');
+        Route::post('/skins/{mcid}', 'SkinController@update');
 
-        Route::get('/cape/{mcid}', 'CapeController@show');
-        Route::post('/cape/{mcid}', 'CapeController@update');
+
+//        Route::post('/cape/{mcid}', 'CapeController@update');
     });
 
 });
 
-Route::get('/skin/{mcid}', 'SkinController@show');
+Route::get('/skins/{mcid}', 'SkinController@show');
+Route::get('/MinecraftSkins/{mcid}.png', 'SkinController@show');
+
+//Route::get('/capes/{mcid}', 'CapeController@show');
+//Route::get('/MinecraftCloaks/{mcid}.png', 'CapeController@show');

@@ -2,7 +2,7 @@
 <div class="modal fade" id="modal-skin-upload">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form method="POST" action="/skin/{{ $mcid->id }}" class="form-horizontal" enctype="multipart/form-data">
+            <form method="POST" action="/skins/{{ $mcid->id }}" class="form-horizontal" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">

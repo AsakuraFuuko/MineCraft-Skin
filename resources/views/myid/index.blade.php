@@ -79,7 +79,7 @@
                                 <tr>
                                     <td class="table-text">
                                         <div>
-                                            <img src="/skin/{{ $mcid->mcid }}/head"/>&nbsp;{{ $mcid->mcid."(".($mcid->genuine ? "正版" : "盗版").")"  }}
+                                            <img src="/skins/{{ $mcid->mcid }}/head"/>&nbsp;{{ $mcid->mcid."(".($mcid->genuine ? "正版" : "盗版").")"  }}
                                         </div>
                                     </td>
 
@@ -93,7 +93,7 @@
 
                                             @if($mcid->skin != null || $mcid->genuine)
                                                 <button type="button" class="btn btn-xs btn-success"
-                                                        onclick="preview_image('/skin/{{ $mcid->mcid }}/preview')">
+                                                        onclick="preview_image('/skins/{{ $mcid->mcid }}/preview')">
                                                     <i class="fa fa-eye fa-lg"></i>
                                                     预览
                                                 </button>
