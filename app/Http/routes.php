@@ -37,7 +37,6 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::resource('/myid', 'MCIDController');
 
-    Route::get('/skin/{mcid}', 'SkinController@show');
     Route::get('/skin/{mcid}/head', 'SkinController@head');
     Route::get('/skin/{mcid}/preview', 'SkinController@preview');
     Route::post('/skin/{mcid}', 'SkinController@update');
@@ -45,3 +44,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/cape/{mcid}', 'CapeController@show');
     Route::post('/cape/{mcid}', 'CapeController@update');
 });
+
+Route::get('/skin/{mcid}', 'SkinController@show');
