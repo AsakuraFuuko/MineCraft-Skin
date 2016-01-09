@@ -19,7 +19,7 @@
                             <input type="hidden" name="id" value="{{ $mcid->id }}">
 
                             <div class="form-group">
-                                <label for="tag" class="col-md-3 control-label">Tag</label>
+                                <label for="mcid" class="col-md-3 control-label">MineCraft ID</label>
                                 <div class="col-md-3">
                                     <p class="form-control-static">{{ $mcid->mcid }}</p>
                                 </div>
