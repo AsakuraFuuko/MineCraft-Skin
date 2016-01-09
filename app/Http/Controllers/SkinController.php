@@ -25,7 +25,6 @@ class SkinController extends Controller
      */
     public function __construct(UploadsManager $manager)
     {
-        $this->middleware('auth');
         $this->manager = $manager;
     }
 
