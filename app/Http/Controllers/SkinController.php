@@ -42,7 +42,7 @@ class SkinController extends Controller
         );
 
         $mcid_id = str_replace('.png', '', $mcid_id);
-        dd($mcid_id);
+//        dd($mcid_id);
         $mcid = MCID::where('mcid', $mcid_id)->first();
         if ($mcid != null && !$mcid->genuine) {
             $file = $this->manager->fileDetails($mcid->skin->url);
