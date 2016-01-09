@@ -49,7 +49,7 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 Route::get('/skins/{mcid}', 'SkinController@show');
-Route::get('/MinecraftSkins/{mcid}.png', 'SkinController@show');
+Route::get('/MinecraftSkins/{mcid}', 'SkinController@show');
 
 //Route::get('/capes/{mcid}', 'CapeController@show');
 //Route::get('/MinecraftCloaks/{mcid}.png', 'CapeController@show');
