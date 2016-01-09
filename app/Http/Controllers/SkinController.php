@@ -40,6 +40,8 @@ class SkinController extends Controller
             'Pragma' => 'no-cache',
             'Expires' => 'Fri, 01 Jan 1990 00:00:00 GMT'
         );
+
+        $mcid_id = str_replace($mcid_id, '.png', '');
         dd($mcid_id);
         $mcid = MCID::where('mcid', $mcid_id)->first();
         if ($mcid != null && !$mcid->genuine) {
