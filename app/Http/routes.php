@@ -29,3 +29,19 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
+
+    Route::resource('/myid', 'MCIDController');
+
+    Route::get('/skin/{mcid}', 'SkinController@show');
+    Route::get('/skin/{mcid}/head', 'SkinController@head');
+    Route::get('/skin/{mcid}/preview', 'SkinController@preview');
+    Route::post('/skin/{mcid}', 'SkinController@update');
+
+    Route::get('/cape/{mcid}', 'CapeController@show');
+    Route::post('/cape/{mcid}', 'CapeController@update');
+});
