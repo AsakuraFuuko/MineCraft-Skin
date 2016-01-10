@@ -56,8 +56,7 @@ class SkinController extends Controller
             imagealphablending($im, false);
             imagesavealpha($im, true);
             // start buffering
-            ob_start();png
-
+            ob_start();
             imagepng($im);
             imagedestroy($im);
             $contents = ob_get_contents();
