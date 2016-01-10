@@ -52,8 +52,12 @@ class SkinController extends Controller
         } else {
             $skin = $this->get_skin($mcid_id);
             $im = imagecreatefromstring($skin);
+            //ブレンドモードを無効にする
+            imagealphablending($im, false);
+            imagesavealpha($im, true);
             // start buffering
-            ob_start();
+            ob_start();png
+
             imagepng($im);
             imagedestroy($im);
             $contents = ob_get_contents();
