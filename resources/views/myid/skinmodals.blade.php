@@ -16,7 +16,7 @@
                             皮肤文件
                         </label>
                         <input type="file" id="skin_file" name="file">
-                        <p class="help-block">图片大小: ≤ 150kb, 尺寸: ≤ 64x64</p>
+                        <p class="col-sm-offset-3 help-block">图片大小: ≤ 150kb, 尺寸: ≤ 64x64</p>
                     </div>
                 </div>
                 <div class="modal-footer">
